@@ -1,19 +1,20 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 
-const ImageUpload = ({uploadFile, setImageToUpload, imageToUpload}) => {
+const ImageUpload = ({selectImageHandler, uploadImage, imageToUpload, fileInput}) => {
 
     return (
-        <Fragment>
-            <input type="file" className="form-control-file" id="fileUpload"
+        <div>
+            <input type="file" className="form-control-file" id="fileUpload" accept="image/*"
+                   key={fileInput}
                    onChange={e => {
-                       setImageToUpload(e.target.files[0])
+                       selectImageHandler(e)
                    }}/>
             {imageToUpload ? (
-                <button type="button" className="btn btn-light" onClick={uploadFile}>
+                <button type="button" className="btn btn-light" onClick={uploadImage}>
                     Upload your file
                 </button>
             ) : null}
-        </Fragment>
+        </div>
     );
 };
 

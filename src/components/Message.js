@@ -1,9 +1,19 @@
 import React from 'react';
+import {Alert} from 'antd';
 
-const Message = ({uploadSuccessMsg, uploadErrorMsg}) => {
+const Message = ({successMessage, errorMessage}) => {
+    let button = null;
+    if (successMessage) {
+        button = <Alert message={successMessage} type="success" showIcon/>
+    } else if (errorMessage) {
+        button = <Alert message={errorMessage} type="error" showIcon/>
+    } else {
+        return null
+    }
+
     return (
         <div>
-            {uploadSuccessMsg ? uploadSuccessMsg : uploadErrorMsg}
+            {button}
         </div>
     );
 };

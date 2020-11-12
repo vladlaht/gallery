@@ -1,4 +1,5 @@
 import './App.css';
+import 'antd/dist/antd.css'
 import React from "react";
 import GalleryContainer from "./containers/GalleryContainer";
 
