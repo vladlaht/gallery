@@ -9,7 +9,6 @@ const Modal: React.FC<Props> = ({imageForView, selectImageForView}) => {
     return (
         <div className="backdrop" onClick={(e) => selectImageForView(e, null)}>
             {imageForView ? <img src={imageForView} alt="fullImg"/> : null}
-
         </div>
     );
 };

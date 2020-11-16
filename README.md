@@ -16,13 +16,18 @@
 
 ## Deployment instructions
 
-Extract gallery.zip file
+Before you run this project, you must install [Node.js](https://nodejs.org/en/) on your machine.
 
-Open Git terminal in project root folder (../gallery)
+After installing Node, you should be able to run the following command to install a package and it's dependencies:
 
-Type command:
+```
+ npm install
+```
+
+
+Then type following line to get the app running on local host:
 ```
  npm start
 ```
 
-To access web application call [localhost](http://localhost/) in your browser
+To access web application call [localhost](http://localhost/) in your browser.
